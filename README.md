@@ -8,6 +8,6 @@ very incomplete
 - jetbrainsmono nerd font
 - kitty
 - tofi
-- dolphin
+- nautilus
 - sddm
   - where-is-my-sddm-theme
