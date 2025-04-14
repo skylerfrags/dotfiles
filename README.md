@@ -3,7 +3,6 @@ very incomplete
 # requirements
 - hyprland
   - hyprshot
-  - hyprpaper
 - waybar
 - jetbrainsmono nerd font
 - kitty
