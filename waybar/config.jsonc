@@ -1,120 +1,92 @@
 {
-	"layer": "top",
-	"position": "top",
-	"modules-left": [
-		"hyprland/workspaces"
-	],
-	"modules-center": [
-		"custom/music"
-	],
-	"modules-right": [
-		"pulseaudio",
-		"backlight",
-		"battery",
-		"clock",
-		"tray",
-		"hyprland/language",
-		"custom/lock",
-		"custom/power"
-	],
-	"hyprland/workspaces": {
-		"on-click": "activate",
-		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1",
-		"format": "{icon}",
-		"all-outputs": true,
-		"format-icons": {
-			"1": "",
-			"2": "󰖟",
-			"3": "",
-			"4": "󰎉",
-			"5": "󰛳",
-			"default": ""
-		}
-	},
-	"tray": {
-		"icon-size": 21,
-		"spacing": 10
-	},
-	"custom/music": {
-		"format": " {}",
-		"escape": true,
-		"interval": 5,
-		"tooltip": false,
-		"exec": "playerctl metadata --format='{{ title }}'",
-		"on-click": "playerctl play-pause",
-		"max-length": 50
-	},
-	"clock": {
-		"timezone": "Europe/London",
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": " {:%d/%m/%Y}",
-		"format": " {:%H:%M}"
-	},
-	"backlight": {
-		"device": "nvidia_0",
-		"format": "{icon}",
-		"on-scroll-up": "brightnessctl s '+10%'",
-		"on-scroll-down": "brightnessctl s '10%-'",
-		"on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"battery": {
-		"states": {
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon}",
-		"format-charging": "󰂄",
-		"format-plugged": "",
-		"format-alt": "{icon}",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"pulseaudio": {
-		// "scroll-step": 1, // %, can be a float
-		"format": "{icon} {volume}%",
-		"format-muted": "",
-		"format-icons": {
-			"default": [
-				"",
-				"",
-				" "
-			]
-		},
-		"on-click": "pavucontrol"
-	},
-	"custom/lock": {
-		"tooltip": false,
-		"on-click": "hyprlock &",
-		"format": ""
-	},
-	"custom/power": {
-		"tooltip": false,
-		"on-click": "wlogout &",
-		"format": "⏻"
-	},
-	"hyprland/language": {
-		"format": " {}",
-		"format-en": "en",
-		"format-fa": "fa",
-		"interval": 1,
-		"keyboard-name": "gaming-keyboard",
-		"on-click": "hyprctl switchxkblayout gaming-keyboard next"
-	}
+  "layer": "bottom",
+  "position": "bottom",
+  "margin-top": 0,
+  "margin-right": 0,
+  "margin-left": 0,
+  "margin-bottom": 0,
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+  "height": 50,
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8,
+  },
+
+  //
+  "modules-left": ["hyprland/workspaces"],
+  //
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "clock",
+  ],
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "\\s*(.*)\\s+": "$1",
+      "\\s*": " ",
+      "(\\d\\. )?(.*)- VLC media player": "<span>󰕼 </span> $2",
+      "(\\d\\. )?(.*)— Mozilla Firefox": "<span> </span> $2",
+      "(\\d\\. )?(.*)- Google Chrome": "<span> </span> $2",
+      "(\\d\\. )?(.*)- Thunar": "<span> </span> $2",
+      "(\\d\\. )?(.*)Terminal": "<span></span> Terminal",
+      "(\\d\\. )?(.*)Vesktop": "<span> </span> Discord",
+      "(\\d\\. )?(.*)Discord Popout": "<span> </span> Discord",
+      "(\\d\\. )?(.*)Spotify": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)Spotify Premium": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)ncspot": "<span>󰓇 </span> Spotify",
+      "(\\d\\. )?(.*)Steam": "<span>󰓓 </span> Steam",
+      "(\\d\\. )?(.*)Minecraft": "<span>󰍳 </span> Minecraft",
+      "(.*)[Ll]unar [Cc]lient": "<span>󰍳 </span> Minecraft",
+      "(\\d\\. )?(.*)Code - OSS": "<span>󰨞 </span> VS Code",
+      "Search(.*)": "<span> </span> Search $1",
+    },
+    "separate-outputs": false,
+  },
+  "clock": {
+    "format": "{:%I:%M %p\n<sub>%m/%d/%Y</sub>}",
+    "tooltip-format": "{:%a, %b %e, %Y}",
+  },
+  "hyprland/workspaces": {
+    "format": "{}",
+    "active-only": false,
+    "format-icons": {},
+    "persistent-workspaces": {},
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+  },
+  "pulseaudio": {
+    "format": "{icon}    {volume}%",
+    "tooltip": true,
+    "format-muted": "    MUTED",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "GTK_THEME=Adw pavucontrol",
+    "on-scroll-up": "pamixer -i 1",
+    "on-scroll-down": "pamixer -d 1",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "  {volume}%",
+    "format-source-muted": "   MUTED",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "GTK_THEME=Adw pavucontrol -t 4",
+    "on-scroll-up": "pamixer --default-source -i 1",
+    "on-scroll-down": "pamixer --default-source -d 1",
+    "scroll-step": 5,
+   },
 }

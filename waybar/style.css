@@ -1,108 +1,196 @@
-@import "mocha.css";
+@import url("base16.css");
 
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 17px;
-  min-height: 0;
+    font-family: "Google Sans Display Medium";
+    transition: all 0.3s ease;
+    font-size: 13.5px;
+    font-weight: 700;
 }
 
-#waybar {
-  background: transparent;
-  color: @text;
-  margin: 5px 5px;
+window#waybar {
+    color: @base05;
+    background: @base00;
+    border-top: 2px solid @base01;
 }
 
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
+tooltip {
+    color: @base05;
+    background: @base00;
+    border: 2px solid @base02;
+    border-radius: 8px;
+    font-family: "ZedMono NFP ExtraBold";
 }
 
-#workspaces button {
-  color: @sapphire;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
-}
-
-#workspaces button:hover {
-  color: @blue;
-  border-radius: 1rem;
-}
-
-#custom-music,
-#tray,
-#backlight,
 #clock,
 #battery,
+#network,
+#bluetooth,
+#cpu,
+#memory,
 #pulseaudio,
-#custom-lock,
-#language,
-#custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
-}
-
-#clock {
-  color: @sapphire;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
-}
-
-#battery {
-  color: @green;
-}
-
-#battery.charging {
-  color: @green;
-}
-
-#battery.warning:not(.charging) {
-  color: @red;
-}
-
-#backlight {
-  color: @yellow;
-}
-
-#backlight,
-#battery {
-  border-radius: 0;
-}
-
-#pulseaudio {
-  color: @sapphire;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-}
-
-#custom-music {
-  color: @sapphire;
-  border-radius: 1rem;
-}
-
-#language {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @sapphire;
-}
-
-#custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @sapphire;
+#pulseaudio.microphone,
+#custom-weather,
+#custom-logo,
+#custom-spotify,
+#custom-expose,
+#custom-notifications,
+#workspaces button,
+#tray {
+    border-radius: 4px;
+    background: @base01;
+    color: @base05;
+    margin: 6px;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    padding: 12px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 #tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+    padding-right: 12px;
 }
 
+#pulseaudio {
+    margin-right: 0px;
+    padding-right: 6px;
+    padding-left: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 12.75px;
+}
+#pulseaudio.microphone {
+    margin-left: 0px;
+    padding-left: 6px;
+    padding-right: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#custom-logo {
+    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 7px;
+    padding-right: 6px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    font-size: 21.5px;
+    background-color: @base0D;
+    color: @base00;
+    font-family: "ZedMono NFP ExtraBold";
+    border-radius: 18px;
+    /* border-bottom-left-radius: 6px; */
+}
+
+#custom-power {
+    margin-right: 10px;
+    margin-left: 4px;
+    font-family: "ZedMono NFP ExtraBold";
+}
+#custom-power:hover {
+    color: @base08;
+}
+
+#workspaces {
+    background: @base01;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    border-radius: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#workspaces:hover {
+    border: 0px transparent;
+}
+#workspaces button {
+    border-radius: 0px;
+    border: 0px;
+    color: @base05;
+    margin: 6px;
+    margin-top: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#workspaces button:nth-child(0) {
+    background-color: red;
+}
+#workspaces button.active {
+    color: @base0D;
+}
+#workspaces button:hover {
+    color: @base0D;
+}
 #workspaces button.urgent {
-  color: @sapphire;
+    color: @base00;
+    background: @base0A;
+}
+#workspaces button {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 12px;
+}
+#custom-expose {
+    margin-left: 0px;
+    margin-right: 12px;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 13px;
+}
+#custom-expose:hover {
+    color: @base0D;
+}
+#custom-spotify {
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+#network {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0;
+    padding-right: 6px;
+    padding-left: 13px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
+}
+#bluetooth {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: 0;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    font-family: "ZedMono NFP ExtraBold";
+}
+
+#clock {
+    padding-top: 1px;
+    font-size: 13px;
+}
+
+#taskbar button {
+    padding: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    border-radius: 4px;
+}
+
+#taskbar button.active {
+    background-color: @base02;
 }
