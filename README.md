@@ -6,7 +6,5 @@ very incomplete
 - waybar
 - jetbrainsmono nerd font
 - kitty
-- tofi
+- walker
 - nautilus
-- sddm
-  - where-is-my-sddm-theme
