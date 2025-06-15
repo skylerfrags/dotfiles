@@ -6,14 +6,13 @@ dotfiles are installed via GNU Stow
 | --------------------------- | :---------------------------------------------------------------------------------------------:
 | **Window Manager**          | Hyprland |
 | **Bar**                     | Waybar |
-| **Application Launcher**    | Walker |
+| **Application Launcher**    | Rofi |
 | **Notification Daemon**     | dunst |
 | **Terminal Emulator**       | Ghostty |
-| **Shell**                   | fish |
-| **Text Editor**             | Neovim(Lazyvim) |
-| **File Manager**            | Thunar + Yazi(not bound atm)|
+| **Shell**                   | zsh |
+| **Text Editor**             | Lazyvim |
+| **File Manager**            | Thunar |
 | **Fonts**                   | JetBrainsMono Nerd Font |
 | **Color Scheme**            | Catppuccin Mocha |
 | **Media Player**            | mpv |
 | **Screenshot Software**     | Hyprshot |
-| **Clipboard**               | clipse |
