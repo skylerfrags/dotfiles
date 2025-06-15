@@ -107,7 +107,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../../"
 
-alias l="ls -d .* --color=auto"
+alias ld="ls -d .* --color=auto"
 alias ll="ls -la --color=auto"
 
 alias c="clear"
