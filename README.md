@@ -23,8 +23,10 @@ stow .
 | **Bar**                     | Waybar |
 | **Application Launcher**    | Rofi |
 | **Notification Daemon**     | dunst |
+| **Wallpaper Daemon**        | swww |
 | **Terminal Emulator**       | Ghostty |
-| **Shell**                   | zsh |
+| **Shell**                   | zsh + powerlevel10k|
+| **zsh Framework**           | oh-my-zsh |
 | **Text Editor**             | Lazyvim |
 | **GUI File Manager**        | Thunar |
 | **Fonts**                   | JetBrainsMono Nerd Font |
