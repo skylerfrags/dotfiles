@@ -119,6 +119,8 @@ alias ll="ls -la --color=auto"
 
 alias c="clear"
 alias v=nvim
+alias vi=nvim
+alias vim=nvim
 alias lg=lazygit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
