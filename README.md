@@ -1,13 +1,19 @@
 # my arch dots
 pretty minimal setup, idk why you're here but hi :3
 
-install via GNU Stow or use ln -s if you only want certain parts
+# install
+```bash
+# hyprland example
+git clone https://github.com/skylerfrags/dotfiles.git
+cd dotfiles
+ln -s ~/dotfiles/hypr/ ~/.config
+```
 
 ## what i use
 
 |   Component                 | Software                                                                                      |
 | --------------------------- | :---------------------------------------------------------------------------------------------:
-| **Window Manager**          | Hyprland (may experiment with niri/sway) |
+| **Window Manager**          | Hyprland |
 | **Bar**                     | Waybar |
 | **Application Launcher**    | Rofi |
 | **Notification Daemon**     | dunst |
@@ -15,7 +21,7 @@ install via GNU Stow or use ln -s if you only want certain parts
 | **Terminal Emulator**       | kitty |
 | **Shell**                   | zsh + powerlevel10k|
 | **zsh Framework**           | oh-my-zsh |
-| **Text Editor**             | Lazyvim |
+| **Text Editor**             | Lazyvim and VS Code |
 | **GUI File Manager**        | Thunar |
 | **Fonts**                   | JetBrainsMono Nerd Font |
 | **Media Player**            | mpv |
