@@ -8,7 +8,7 @@
     blue:                        rgba(165, 216, 255, 100%);    /* Blue */
     urgent-foreground:           rgba(255, 154, 158, 100%);    /* Red */
     alternate-urgent-background: rgba(36, 36, 36, 90%);       /* Dark background */
-    active-foreground:           rgba(163, 232, 232, 100%);   /* Cyan */
+    active-foreground:           rgba(245, 194, 231, 100%);   /* Catppuccin Mocha Pink */
     lightbg:                     rgba(47, 47, 47, 100%);      /* Background light */
     selected-active-foreground:  rgba(255, 255, 255, 100%);   /* White */
     alternate-active-background: rgba(36, 36, 36, 89%);       /* Dark background */
@@ -16,8 +16,8 @@
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba(221, 160, 221, 100%);   /* Magenta */
-    selected-normal-background:  rgba(163, 232, 232, 100%);   /* Cyan */
-    border-color:                rgba(163, 232, 232, 100%);   /* Cyan */
+    selected-normal-background:  rgba(245, 194, 231, 100%);   /* Catppuccin Mocha Pink */
+    border-color:                rgba(245, 194, 231, 100%);   /* Catppuccin Mocha Pink */
     spacing:                     2;
     separatorcolor:              rgba(74, 74, 74, 100%);      /* Black */
     urgent-background:           rgba(74, 74, 74, 17%);       /* Black */
@@ -26,7 +26,7 @@
     background-color:            rgba(0, 0, 0, 0%);          /* Transparent background */
     alternate-active-foreground: @active-foreground;
     active-background:           rgba(74, 74, 74, 17%);       /* Black */
-    selected-active-background:  rgba(163, 232, 232, 100%);   /* Cyan */
+    selected-active-background:  rgba(245, 194, 231, 100%);   /* Catppuccin Mocha Pink */
 }
 
 

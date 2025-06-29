@@ -46,4 +46,6 @@ configuration {
 
 
 
-@theme "~/dotfiles/rofi/themes/main.rasi"
+//@theme "~/dotfiles/rofi/themes/main.rasi"
+
+@theme "/home/skyler/.config/rofi/themes/main.rasi"
