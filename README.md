@@ -5,7 +5,6 @@ pretty minimal setup, idk why you're here but hi :3
 ```bash
 # hyprland example
 git clone https://github.com/skylerfrags/dotfiles.git
-cd dotfiles
 ln -s ~/dotfiles/hypr/ ~/.config
 ```
 
