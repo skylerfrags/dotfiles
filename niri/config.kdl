@@ -1,0 +1,167 @@
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+    }
+    mouse {
+        accel-profile "flat"
+    }
+    focus-follows-mouse max-scroll-amount="20%"
+    mod-key "Super"
+}
+
+spawn-at-startup "waybar"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "xwayland-satellite"
+
+prefer-no-csd
+
+cursor {
+    xcursor-theme "Catppuccin-Mocha-Dark-Cursors"
+    xcursor-size 24
+}
+
+output "DP-4" {
+    focus-at-startup
+    mode "2560x1440@239.972"
+    scale 1
+    position x=0 y=0
+}
+
+output "DP-5" {
+    mode "2560x1440@143.856"
+    scale 1
+    position x=2560 y=0
+}
+
+layout {
+    gaps 4
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.5
+        proportion 0.75
+    }
+    preset-window-heights {
+        proportion 0.5
+        proportion 1.0
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        off
+        width 3
+        active-color "#cba6f7"
+        inactive-color "#1e1e2e"
+    }
+    border {
+        width 3
+        active-color "#cba6f7"
+        inactive-color "#1e1e2e"
+    }
+    shadow {
+        on
+        draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#00000070"
+    }
+}
+
+window-rule {
+    match app-id="Bitwarden"
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id="ghostty"
+    default-column-width {
+        proportion 0.333
+    }
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+binds {
+    // Launch Programs
+    Mod+T { spawn "ghostty"; }
+    Mod+Space { spawn "fuzzel"; }
+
+    // Focus Window/Column
+    Mod+W     { focus-window-up; }
+    Mod+A     { focus-column-left; }
+    Mod+S     { focus-window-down; }
+    Mod+D     { focus-column-right; }
+   
+    // Move Window/Column
+    Mod+Shift+W    { move-window-up; }
+    Mod+Shift+A  { move-column-left; }
+    Mod+Shift+S  { move-window-down; }
+    Mod+Shift+D { move-column-right; }
+
+    // Move Column to Workspace
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+
+    // Move/Focus Workspace
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown cooldown-ms=150 { move-workspace-down; }
+    Mod+Shift+WheelScrollUp cooldown-ms=150 { move-workspace-up; }
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+
+    // Change Window Proportions
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+C { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+    Mod+Ctrl+W { set-window-height "-10%"; }
+    Mod+Ctrl+A { set-column-width "-10%"; }
+    Mod+Ctrl+S { set-window-height "+10%"; }
+    Mod+Ctrl+D { set-column-width "+10%"; }
+
+    // General Binds
+    Mod+Shift+M { quit skip-confirmation=true; }
+    Mod+E repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+    Mod+Shift+P { power-off-monitors; }
+
+    // OBS Websocket for global hotkeys because wayland can suck my balls and dick
+    Mod+F12 { spawn "obs-cmd" "replay" "save"; }
+
+}
+
+environment {
+    DISPLAY ":1"
+}
