@@ -3,16 +3,16 @@ pretty minimal arch setup
 
 # install
 ```bash
-# niri example
+# hyprland example
 git clone https://github.com/skylerfrags/dotfiles.git
-ln -s ~/dotfiles/niri/ ~/.config
+ln -s ~/dotfiles/hypr/ ~/.config
 ```
 
 ## what i use
 
 |   Component                 | Software                                                                                      |
 | --------------------------- | :---------------------------------------------------------------------------------------------:
-| **Window Manager**          | Niri |
+| **Window Manager**          | Hyprland |
 | **Theme**                   | Catppuccin Mocha |
 | **Bar**                     | Waybar |
 | **Application Launcher**    | Fuzzel |
@@ -20,6 +20,6 @@ ln -s ~/dotfiles/niri/ ~/.config
 | **Terminal Emulator**       | Ghostty |
 | **Shell**                   | Bash + Starship |
 | **Text Editor**             | Neovim + VSCode |
-| **File Manager**        | Nautilus |
-| **Fonts**                   | JetBrainsMono |
+| **File Manager**            | Nautilus |
+| **Fonts**                   | JetBrains Mono |
 | **Media Player**            | mpv |
