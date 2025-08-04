@@ -7,8 +7,8 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["niri/workspaces"],
-  "modules-center": ["niri/window"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": [],
   "modules-right": [
     "cpu",
     "memory",
@@ -37,10 +37,10 @@
       "default": "",
     },
   },
-  "niri/workspaces": {
+  "hyprland/workspaces": {
     "on-click": "activate",
-    "format": "{index}",
-    "all-outputs": false,
+    "format": "{id}",
+    "all-outputs": true,
   },
   "niri/window": {
     "format": "{title}",
