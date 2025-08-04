@@ -1,0 +1,14 @@
+<!DOCTYPE patchbay>
+<patchbay name="patchbay" version="0.9.4">
+ <items>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Teardown" port="Teardown:output_FL"/>
+   <input node="Game-Audio Audio/Sink sink" port="Game-Audio Audio/Sink sink:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Teardown" port="Teardown:output_FR"/>
+   <input node="Game-Audio Audio/Sink sink" port="Game-Audio Audio/Sink sink:playback_FR"/>
+  </item>
+ </items>
+</patchbay>
+
