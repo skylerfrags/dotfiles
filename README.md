@@ -23,3 +23,4 @@ ln -s ~/dotfiles/hypr/ ~/.config
 | **File Manager**            | Nautilus |
 | **Fonts**                   | JetBrains Mono |
 | **Media Player**            | mpv |
+| **Voicemeeter Alternative** | Sonusmix |
