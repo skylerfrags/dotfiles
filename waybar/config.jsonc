@@ -38,6 +38,7 @@
     },
   },
   "hyprland/workspaces": {
+    "active-only": true,
     "on-click": "activate",
     "format": "{id}",
     "all-outputs": true,
