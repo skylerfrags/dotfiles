@@ -21,6 +21,6 @@ ln -s ~/dotfiles/hypr/ ~/.config
 | **Shell**                   | Bash + Starship |
 | **Text Editor**             | Neovim + VSCode |
 | **File Manager**            | Nautilus |
-| **Fonts**                   | JetBrains Mono |
+| **Fonts**                   | Iosevka Nerd Font |
 | **Media Player**            | mpv |
 | **Voicemeeter Alternative** | Sonusmix |
