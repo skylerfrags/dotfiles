@@ -4,7 +4,7 @@
   "height": 40,
   "width": 1280,
   "spacing": 2,
-  "margin-top": 10,
+  "margin-top": 5,
   "margin-bottom": 10,
   "exclusive": true,
   "gtk-layer-shell": true,
