@@ -1,8 +1,8 @@
 * {
   min-height: 0;
   min-width: 0;
-  font-family: Lexend, "Iosevka Nerd Font";
-  font-size: 16px;
+  font-family: "Iosevka Nerd Font";
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -13,9 +13,9 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0.3rem 0.6rem;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
+  padding: 0 5px;
+  margin: 3px;
+  border-radius: 3px;
   /* background-color: #181825; */
   background-color: #1e1e2e;
   color: #cdd6f4;
