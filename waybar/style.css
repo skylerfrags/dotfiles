@@ -1,15 +1,13 @@
 * {
-  min-height: 0;
-  min-width: 0;
+  min-height: 0px;
+  min-width: 0px;
   font-family: "Iosevka Nerd Font";
   font-size: 14px;
   font-weight: 600;
 }
 
 window#waybar {
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  background-color: transparent;
+  background-color: #1e1e2e;
 }
 
 #workspaces button {
@@ -109,5 +107,5 @@ window#waybar.empty #window {
 
 tooltip {
   background-color: #181825;
-  border: 2px solid #89b4fa;
+  border: 2px solid #cba6f7;
 }
