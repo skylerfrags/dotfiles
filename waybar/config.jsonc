@@ -30,6 +30,11 @@
 	"DP-5": [ 4, 5, 6, 10 ],
     },
   },
+  "niri/workspaces": {
+    "format": "{index}",
+    "all-outputs": false,
+    "on-click": "activate",
+  },
   "tray": {
     "show-passive-items": true,
     "spacing": 10,
