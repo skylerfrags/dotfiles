@@ -23,4 +23,4 @@ ln -s ~/dotfiles/hypr/ ~/.config
 | **File Manager**            | Nautilus |
 | **Fonts**                   | Iosevka Nerd Font |
 | **Media Player**            | mpv |
-| **Voicemeeter Alternative** | Sonusmix |
+| **OBS Plugins**             | Pipewire-Audio-Capture + Multi-RTMP | 
