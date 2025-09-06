@@ -13,13 +13,18 @@ input {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
-spawn-at-startup "xwayland-satellite"
+spawn-at-startup "com.obsproject.Studio"  "--startreplaybuffer"
+spawn-at-startup "com.github.wwmm.easyeffects"
 
 prefer-no-csd
 
 cursor {
     xcursor-theme "Catppuccin-Mocha-Dark-Cursors"
     xcursor-size 24
+}
+
+clipboard {
+    disable-primary
 }
 
 output "DP-4" {
@@ -36,7 +41,7 @@ output "DP-5" {
 }
 
 layout {
-    gaps 4
+    gaps 10
     center-focused-column "never"
     preset-column-widths {
         proportion 0.25
@@ -57,7 +62,7 @@ layout {
         inactive-color "#1e1e2e"
     }
     border {
-        width 3
+        width 0
         active-color "#cba6f7"
         inactive-color "#1e1e2e"
     }
@@ -77,14 +82,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="ghostty"
-    default-column-width {
-        proportion 0.333
-    }
-}
-
-window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -162,6 +160,3 @@ binds {
 
 }
 
-environment {
-    DISPLAY ":1"
-}
