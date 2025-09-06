@@ -1,26 +1,24 @@
-# my arch dots
-pretty minimal arch setup
+# my dots
+pretty minimal setup
 
 # install
 ```bash
-# hyprland example
+# niri example
 git clone https://github.com/skylerfrags/dotfiles.git
-ln -s ~/dotfiles/hypr/ ~/.config
+ln -s ~/dotfiles/niri/ ~/.config
 ```
 
 ## what i use
 
 |   Component                 | Software                                                                                      |
 | --------------------------- | :---------------------------------------------------------------------------------------------:
-| **Window Manager**          | Hyprland |
-| **Theme**                   | Catppuccin Mocha |
+| **Distro(s)**               | Arch (main) Void/Gentoo (testing) |
+| **Window Manager**          | Niri |
 | **Bar**                     | Waybar |
 | **Application Launcher**    | Fuzzel |
 | **Wallpaper Daemon**        | swww |
+| **Wallpaper Picker**        | Waypaper |
 | **Terminal Emulator**       | Ghostty |
-| **Shell**                   | Bash + Starship |
-| **Text Editor**             | Neovim + VSCode |
 | **File Manager**            | Nautilus |
-| **Fonts**                   | Iosevka Nerd Font |
+| **Font**                    | Iosevka |
 | **Media Player**            | mpv |
-| **OBS Plugins**             | Pipewire-Audio-Capture + Multi-RTMP | 
