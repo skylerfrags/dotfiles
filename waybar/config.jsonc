@@ -11,7 +11,7 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": [],
   "modules-right": [
     "cpu",
