@@ -40,9 +40,16 @@ output "DP-5" {
     position x=2560 y=0
 }
 
+gestures {
+    hot-corners {
+	off
+    }
+}
+
 layout {
     gaps 10
     center-focused-column "never"
+    always-center-single-column
     preset-column-widths {
         proportion 0.25
         proportion 0.5
@@ -78,7 +85,19 @@ layout {
 
 window-rule {
     match app-id="Bitwarden"
-    block-out-from "screen-capture"
+    block-out-from "screencast"
+}
+
+window-rule {
+   match is-floating=true
+   baba-is-float true
+}
+
+window-rule {
+    match app-id="mpv"
+    open-floating true
+    default-column-width { fixed 1920; }
+    default-window-height { fixed 1080; }
 }
 
 window-rule {
@@ -88,8 +107,10 @@ window-rule {
 
 binds {
     // Launch Programs
-    Mod+T { spawn "ghostty"; }
+    Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "fuzzel"; }
+    Mod+B { spawn "brave"; }
+    Mod+F12 { spawn "obs-cmd" "replay" "save"; }
 
     // Focus Window/Column
     Mod+W     { focus-window-up; }
@@ -119,6 +140,10 @@ binds {
     Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
     Mod+Shift+WheelScrollDown cooldown-ms=150 { move-workspace-down; }
     Mod+Shift+WheelScrollUp cooldown-ms=150 { move-workspace-up; }
+    Mod+Shift+Q { move-workspace-to-monitor-left; }
+    Mod+Shift+E { move-workspace-to-monitor-right; }
+    Mod+Alt+A { focus-monitor-left; }
+    Mod+Alt+D { focus-monitor-right; }
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -145,6 +170,7 @@ binds {
 
     // General Binds
     Mod+Shift+M { quit skip-confirmation=true; }
+    Mod+T { toggle-column-tabbed-display; }
     Mod+E repeat=false { toggle-overview; }
     Mod+Q repeat=false { close-window; }
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -154,9 +180,6 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
     Mod+Shift+P { power-off-monitors; }
-
-    // OBS Websocket for global hotkeys because wayland can suck my balls and dick
-    Mod+F12 { spawn "obs-cmd" "replay" "save"; }
 
 }
 
