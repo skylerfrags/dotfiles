@@ -1,7 +1,6 @@
 {
   "layer": "bottom",
   "position": "bottom",
-  "output": "DP-5",
   "height": 40,
   "width": 1280,
   "spacing": 2,
@@ -21,15 +20,6 @@
     "clock#simpleclock",
     "tray",   
   ],
-  "hyprland/workspaces": {
-    "active-only": false,
-    "on-click": "activate",
-    "format": "{id}",
-    "all-outputs": true,
-    "persistent-workspaces": {
-	"DP-5": [1, 2, 3, 4, 5, 6, 7,]
-    },
-  },
   "niri/workspaces": {
     "format": "{index}",
     "all-outputs": false,
