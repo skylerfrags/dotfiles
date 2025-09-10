@@ -15,6 +15,8 @@ spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "com.obsproject.Studio"  "--startreplaybuffer"
 spawn-at-startup "com.github.wwmm.easyeffects"
+spawn-at-startup "discord"
+spawn-at-startup "steam"
 
 prefer-no-csd
 
@@ -74,7 +76,6 @@ layout {
         inactive-color "#1e1e2e"
     }
     shadow {
-        on
         draw-behind-window true
         softness 30
         spread 5
@@ -85,7 +86,8 @@ layout {
 
 window-rule {
     match app-id="Bitwarden"
-    block-out-from "screencast"
+    block-out-from "screen-capture"
+    open-floating true
 }
 
 window-rule {
@@ -94,8 +96,38 @@ window-rule {
 }
 
 window-rule {
+    match app-id="pavucontrol"
     match app-id="mpv"
+    match app-id="steam" title="Friends"
+    match app-id="steam" title="Settings"
     open-floating true
+}
+
+window-rule {
+    match app-id="obs"
+    match app-id="discord"
+    open-on-output "DP-5"
+}
+
+window-rule {
+    match app-id="easyeffects"
+    open-on-output "DP-5"
+    open-on-workspace "2"
+}
+
+window-rule {
+    match app-id="steam"
+    open-on-output "DP-4"
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 1024; }
+}
+
+window-rule {
+    match app-id="mpv"
     default-column-width { fixed 1920; }
     default-window-height { fixed 1080; }
 }
@@ -107,7 +139,7 @@ window-rule {
 
 binds {
     // Launch Programs
-    Mod+Return { spawn "ghostty"; }
+    Mod+Return { spawn "alacritty"; }
     Mod+Space { spawn "fuzzel"; }
     Mod+B { spawn "brave"; }
     Mod+F12 { spawn "obs-cmd" "replay" "save"; }
@@ -163,10 +195,10 @@ binds {
     Mod+Ctrl+F { expand-column-to-available-width; }
     Mod+C { center-column; }
     Mod+Ctrl+C { center-visible-columns; }
-    Mod+Ctrl+W { set-window-height "-10%"; }
-    Mod+Ctrl+A { set-column-width "-10%"; }
-    Mod+Ctrl+S { set-window-height "+10%"; }
-    Mod+Ctrl+D { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Ctrl+Minus { set-column-width "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Ctrl+Equal { set-column-width "+10%"; }
 
     // General Binds
     Mod+Shift+M { quit skip-confirmation=true; }
