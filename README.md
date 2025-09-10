@@ -18,7 +18,7 @@ ln -s ~/dotfiles/niri/ ~/.config
 | **Application Launcher**    | Fuzzel |
 | **Wallpaper Daemon**        | swww |
 | **Wallpaper Picker**        | Waypaper |
-| **Terminal Emulator**       | Ghostty |
+| **Terminal Emulator**       | Alacritty |
 | **File Manager**            | Nautilus |
 | **Font**                    | Iosevka |
 | **Media Player**            | mpv |

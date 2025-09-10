@@ -1,0 +1,13 @@
+[general]
+import = [ "catppuccin-mocha.toml" ]
+
+[window]
+decorations = "None"
+
+[font]
+normal.family = "Iosevka Nerd Font"
+bold.family = "Iosevka Nerd Font"
+italic.family = "Iosevka Nerd Font"
+bold_italic.family = "Iosevka Nerd Font"
+
+size = 15.0
