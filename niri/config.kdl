@@ -66,11 +66,12 @@ layout {
 
     focus-ring {
         off
-        width 3
+        width 0
         active-color "#cba6f7"
         inactive-color "#1e1e2e"
     }
     border {
+	off
         width 0
         active-color "#cba6f7"
         inactive-color "#1e1e2e"
@@ -130,6 +131,11 @@ window-rule {
     match app-id="mpv"
     default-column-width { fixed 1920; }
     default-window-height { fixed 1080; }
+}
+
+window-rule {
+    match app-id="alacritty"
+    opacity 0.5
 }
 
 window-rule {
