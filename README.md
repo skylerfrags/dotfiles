@@ -1,5 +1,7 @@
 # my dots
-pretty minimal setup
+<p align="center">
+<img src="./image.png">
+</p>
 
 # install
 ```bash
