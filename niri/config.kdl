@@ -58,6 +58,7 @@ layout {
         proportion 0.75
     }
     preset-window-heights {
+	proportion 0.25
         proportion 0.5
         proportion 1.0
     }
@@ -75,17 +76,9 @@ layout {
         offset x=0 y=5
         color "#00000070"
     }
-}
-
-window-rule {
-    match app-id="Bitwarden"
-    block-out-from "screen-capture"
-    open-floating true
-}
-
-window-rule {
-   match is-floating=true
-   baba-is-float true
+    tab-indicator {
+	off
+    }
 }
 
 window-rule {
@@ -98,13 +91,8 @@ window-rule {
 window-rule {
     match app-id="obs"
     match app-id="discord"
-    open-on-output "DP-5"
-}
-
-window-rule {
     match app-id="easyeffects"
     open-on-output "DP-5"
-    open-on-workspace "2"
 }
 
 window-rule {
