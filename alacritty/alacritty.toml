@@ -3,7 +3,6 @@ import = [ "catppuccin-mocha.toml" ]
 
 [window]
 decorations = "None"
-opacity = 0.8
 
 [font]
 normal.family = "Iosevka Nerd Font"
