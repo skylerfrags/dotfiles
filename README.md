@@ -17,6 +17,7 @@ ln -s ~/dotfiles/niri/ ~/.config
 | **Distro(s)**               | Arch (main) Void/Gentoo (testing) |
 | **Window Manager**          | Niri |
 | **Bar**                     | Waybar |
+| **Web Browser**             | Helium |
 | **Application Launcher**    | Fuzzel |
 | **Wallpaper Daemon**        | swww |
 | **Wallpaper Picker**        | Waypaper |
