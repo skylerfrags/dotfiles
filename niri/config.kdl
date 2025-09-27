@@ -121,7 +121,6 @@ binds {
     // Launch Programs
     Mod+Return { spawn "alacritty"; }
     Mod+Space { spawn "fuzzel"; }
-    Mod+B { spawn "helium-browser"; }
     Mod+F12 { spawn "obs-cmd" "replay" "save"; }
 
     // Focus Window/Column
@@ -129,6 +128,8 @@ binds {
     Mod+A     { focus-column-left; }
     Mod+S     { focus-window-down; }
     Mod+D     { focus-column-right; }
+    Mod+WheelScrollUp { focus-column-left; }
+    Mod+WheelScrollDown { focus-column-right; }
    
     // Move Window/Column
     Mod+Shift+W    { move-window-up; }
@@ -148,8 +149,6 @@ binds {
     Mod+Shift+9 { move-column-to-workspace 9; }
 
     // Move/Focus Workspace
-    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
     Mod+Shift+WheelScrollDown cooldown-ms=150 { move-workspace-down; }
     Mod+Shift+WheelScrollUp cooldown-ms=150 { move-workspace-up; }
     Mod+Shift+Q { move-workspace-to-monitor-left; }
